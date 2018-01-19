@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="oogh.yuanxiao.activity.JobDetailActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_job_detail"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_nav_arrow_back"
+        app:titleTextColor="@android:color/white"/>
+
+
+    <TextView
+        android:id="@+id/tv_job_detail_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_job_detail"
+        tools:text="运营实习生"
+        />
+
+    <TextView
+        android:id="@+id/tv_job_detail_money_cutom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/transparentBlack"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_job_detail_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_job_detail_title"
+        tools:text="99-100/天"/>
+
+    <TextView
+        android:id="@+id/tv_job_detail_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toRightOf="@+id/tv_job_detail_money_cutom"
+        app:layout_constraintTop_toBottomOf="@+id/tv_job_detail_title"
+        tools:text="上海"/>
+
+    <TextView
+        android:id="@+id/tv_job_detail_week_cutom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_job_detail_position"
+        app:layout_constraintLeft_toRightOf="@+id/tv_job_detail_position"
+        tools:text="4天/周"/>
+
+    <TextView
+        android:id="@+id/tv_job_detail_good"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_job_detail_title"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_job_detail_money_cutom"
+        tools:text="职位诱惑：市中心上班，提供转正机会，全方位成长"/>
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="22dp"
+        android:text="职位描述"
+        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_job_detail_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_job_detail_good"/>
+
+    <TextView
+        android:id="@+id/tv_job_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:maxLines="15"
+        app:layout_constraintLeft_toLeftOf="@+id/textView7"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        tools:text="      1.负责帮助客户进行岗位的招聘，\n      2.进行简历筛选，并对符合条件的人员进行面试\n      3.对面试人员进行面试安排；\n      4.完成候选人的入职安排等 "/>
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="16dp"
+        android:text="截止日期"
+        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        app:layout_constraintLeft_toLeftOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/tv_job_detail"/>
+
+    <TextView
+        android:id="@+id/tv_job_detail_deadline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/textView13"
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        tools:text="2017-11-23"/>
+
+    <Button
+        android:id="@+id/btn_send_myself"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="142dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:elevation="6dp"
+        android:onClick="doSend"
+        android:text="投个简历"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_job_detail_deadline"/>
+
+    <ProgressBar
+        android:id="@+id/pb_job_detail"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar_job_detail"/>
+
+</android.support.constraint.ConstraintLayout>

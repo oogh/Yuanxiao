@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="oogh.yuanxiao.activity.CetActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_cet"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_nav_arrow_back"
+        app:titleTextColor="@android:color/white"/>
+
+    <ProgressBar
+        android:id="@+id/pb_cet_loading"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_get_eid"/>
+
+    <TextView
+        android:id="@+id/tv_tag_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="58dp"
+        android:text="学号: "
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_cet"/>
+
+    <EditText
+        android:id="@+id/et_cet_sid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_tag_1"
+        app:layout_constraintLeft_toRightOf="@+id/tv_tag_1"/>
+
+    <TextView
+        android:id="@+id/tv_tag_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="16dp"
+        android:text="姓名: "
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_tag_1"
+        app:layout_constraintTop_toBottomOf="@+id/et_cet_sid"/>
+
+    <EditText
+        android:id="@+id/et_cet_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_tag_2"
+        app:layout_constraintLeft_toLeftOf="@+id/et_cet_sid"/>
+
+    <Button
+        android:id="@+id/btn_get_eid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="doSearch"
+        android:text="查询成绩"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_cet_name"/>
+
+    <TextView
+        android:id="@+id/tv_cet_eid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:textSize="18sp"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toRightOf="@+id/et_cet_name"
+        app:layout_constraintRight_toLeftOf="@+id/tv_tag_2"
+        app:layout_constraintTop_toBottomOf="@+id/btn_get_eid"
+        tools:text="准考证号:    310280171609502"/>
+
+    <TextView
+        android:id="@+id/tv_cet_listen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_cet_eid"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cet_eid"
+        tools:text="听力:    162分"/>
+
+    <TextView
+        android:id="@+id/tv_cet_read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_cet_listen"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cet_listen"
+        tools:text="阅读:    160分"/>
+
+    <TextView
+        android:id="@+id/tv_cet_write"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_cet_read"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cet_read"
+        tools:text="写作:    200分"/>
+
+    <TextView
+        android:id="@+id/tv_cet_sum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_cet_write"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cet_write"
+        tools:text="总分:    460分"/>
+
+
+</android.support.constraint.ConstraintLayout>

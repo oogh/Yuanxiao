@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="oogh.yuanxiao.fragment.DashboardFragment">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        android:elevation="8dp"
+        app:titleTextColor="@android:color/white">
+    </android.support.v7.widget.Toolbar>
+
+    <com.youth.banner.Banner
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

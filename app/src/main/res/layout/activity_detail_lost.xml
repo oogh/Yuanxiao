@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="oogh.yuanxiao.activity.DetailLostActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_detail_lost"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        android:elevation="8dp"
+        app:navigationIcon="@drawable/ic_nav_arrow_back"
+        app:titleTextColor="@android:color/white">
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/tv_lost_detail_title"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:text="校园卡丢失"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tv_lost_detail_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="10dp"
+        android:padding="16dp"
+        android:text="日期：2014-05-21 17:31:20"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/tv_lost_detail_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:padding="16dp"
+        android:text="联系方式：18317168712"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/tv_lost_detail_describe"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="25dp"
+        android:text="我捡到一个校园卡，名字是李磊！速度过来领！"
+        android:textSize="20sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_lost_detail_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            app:srcCompat="@drawable/ic_delete"/>
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_lost_detail_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            app:srcCompat="@drawable/ic_phone"/>
+    </LinearLayout>
+</LinearLayout>
